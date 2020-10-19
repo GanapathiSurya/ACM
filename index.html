@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="membership.css">
+<link rel="stylesheet" type="text/css" href="w3.css">
+</head>
+<body onload="slideshow(0)">
+<br><br><br><br>
+	<center>
+<ul class=" w3-large w3-container w3-card-2 w3-border" id="membership-container">
+<li class="w3-panel membership-container-li">
+Chapter members are eligible for a three-month complimentary electronic subscription to Acm's flagship publication communications of the ACM.
+</li>
+<li class="w3-panel membership-container-li ">
+Chapter members are eligible for an "acm.org" email forwarding address with filtering.
+</li>
+<li class="w3-panel  membership-container-li">
+TechNews, the latest news in computing, 3x weekly, careernews, the latest career and industry news, bi-monthly & membernet, all about acm people and events monthly.
+</li>
+<li class="w3-panel  membership-container-li">
+A full year electronics subscription to XRDS, Acm's students Magazine.
+</li>
+<li class="w3-panel  membership-container-li">
+Discounts on subscriptions to ACM journals, magazines, books, and conferences.
+</li>
+<li class="w3-panel  membership-container-li">
+The option to subscribe to the ACM Digital Library, which includes over 2 million pages of text.
+</li>
+<div class="w3-panel">For 1 Year: Rs.200/-, For 2 Years: Rs.350/- & For 3 Years: Rs.500/-</div>
+</ul>
+</center>
+<script type="text/javascript">
+var ul=document.getElementById("membership-container");
+var li = ul.getElementsByTagName("li");
+var t,k;
+function slideshow(a)
+{
+k=a;
+li[k].style.backgroundColor="black";	
+li[k].style.color="white";
+li[k].style.padding="15px";
+li[k].style.fontSize="1.5rem";
+li[k].style.borderRadius="15px";
+for(i=0;i<li.length;i++)
+{
+	if(i=k)
+	{
+li[k].style.backgroundColor="white";
+	}
+}
+}
+setTimeout(slideshow(1),3000);
+setTimeout(slideshow(2),6000);
+setTimeout(slideshow(3),9000);
+setTimeout(slideshow(4),12000);
+setTimeout(slideshow(5),15000);
+</script>
+</body>
+</html>
