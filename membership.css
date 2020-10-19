@@ -41,6 +41,17 @@ body{
      
 }
 } 
+
+@media screen and (max-width:800px)
+{
+.membership-container-li
+{
+	width:100%;
+     padding: 25px;
+     margin-bottom: 20px;
+     
+}
+} 
 /* latin-ext */
 @font-face {
   font-family: 'BioRhyme Expanded';
