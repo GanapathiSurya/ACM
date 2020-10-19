@@ -1,0 +1,34 @@
+.membership-container-li:nth-child(odd)
+{
+	float: left;
+}
+.membership-container-li:nth-child(even)
+{
+	float: right;
+}
+#membership-container {
+     
+     list-style-type: none;
+}
+.membership-container-li{
+    box-shadow: 2px 2px 2px 2px black;
+	text-align: left;
+	
+}
+@media screen and (min-width:1000px)
+{
+.membership-container-li
+{
+	width:51%;
+	font-size:1.2rem;
+}
+} 
+@media screen and (max-width:1000px)
+{
+.membership-container-li
+{
+	width:51%;
+	font-size:2rem;
+
+}
+} 
