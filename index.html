@@ -1,58 +1,134 @@
+<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="membership.css">
 <link rel="stylesheet" type="text/css" href="w3.css">
 </head>
-<body onload="slideshow(0)">
+<body>
 <br><br><br><br>
 	<center>
-<ul class=" w3-large w3-container w3-card-2 w3-border" id="membership-container">
-<li class="w3-panel membership-container-li">
+<ul id="membership-container" class="w3-white w3-padding-large w3-round-large w3-margin-xxlarge">
+	<h1 style="font-family:'BioRhyme Expanded'">ACM Membership Benefits</h1>
+	<br>
+<li class="membership-container-li">
 Chapter members are eligible for a three-month complimentary electronic subscription to Acm's flagship publication communications of the ACM.
 </li>
-<li class="w3-panel membership-container-li ">
+<li class="membership-container-li ">
 Chapter members are eligible for an "acm.org" email forwarding address with filtering.
 </li>
-<li class="w3-panel  membership-container-li">
+<li class="membership-container-li">
 TechNews, the latest news in computing, 3x weekly, careernews, the latest career and industry news, bi-monthly & membernet, all about acm people and events monthly.
 </li>
-<li class="w3-panel  membership-container-li">
+<li class="membership-container-li">
 A full year electronics subscription to XRDS, Acm's students Magazine.
 </li>
-<li class="w3-panel  membership-container-li">
+<li class="membership-container-li">
 Discounts on subscriptions to ACM journals, magazines, books, and conferences.
 </li>
-<li class="w3-panel  membership-container-li">
+<li class="membership-container-li">
 The option to subscribe to the ACM Digital Library, which includes over 2 million pages of text.
 </li>
-<div class="w3-panel">For 1 Year: Rs.200/-, For 2 Years: Rs.350/- & For 3 Years: Rs.500/-</div>
+<div class="w3-panel"><h1><b>For 1 Year: Rs.200/-, For 2 Years: Rs.350/- & For 3 Years: Rs.500/-</b></h1></div>
 </ul>
 </center>
 <script type="text/javascript">
 var ul=document.getElementById("membership-container");
 var li = ul.getElementsByTagName("li");
 var t,k;
+var color;
+for(f=0;f<li.length;f++)
+{
+if(f==0)
+{
+	shadowColor ="#ff9999";
+}
+else if(f==1)
+{
+	shadowColor ="#25a7da";
+}
+else if(f==2)
+{
+	shadowColor ="#00b300";
+}
+else if(f==3)
+{
+	shadowColor ="#ffc14d";
+}
+else if(f==4)
+{
+	shadowColor ="#b62f2f";
+}
+else if(f==5)
+{
+	shadowColor ="black";
+}
+
+li[f].style.boxShadow="10px 10px "+shadowColor;
+li[f].style.borderLeft="5px solid "+shadowColor;
+li[f].style.borderTop="5px solid "+shadowColor;
+}
 function slideshow(a)
 {
+	txt="";
 k=a;
-li[k].style.backgroundColor="black";	
+if(k==0)
+{
+	color ="red";
+}
+else if(k==1)
+{
+	color ="blue";
+}
+else if(k==2)
+{
+	color ="green";
+}
+else if(k==3)
+{
+	color ="orange";
+}
+else if(k==4)
+{
+	color ="brown";
+}
+else if(k==5)
+{
+	color ="black";
+}
+li[k].style.backgroundColor=color;	
 li[k].style.color="white";
-li[k].style.padding="15px";
-li[k].style.fontSize="1.5rem";
 li[k].style.borderRadius="15px";
+li[k].style.boxShadow="10px 10px "+color;
 for(i=0;i<li.length;i++)
 {
-	if(i=k)
+	if(i!=k)
 	{
-li[k].style.backgroundColor="white";
+li[i].style.backgroundColor="white";
+li[i].style.color="black";
 	}
 }
 }
-setTimeout(slideshow(1),3000);
-setTimeout(slideshow(2),6000);
-setTimeout(slideshow(3),9000);
-setTimeout(slideshow(4),12000);
-setTimeout(slideshow(5),15000);
+var c=0;
+var d=0;
+while(d< 10000)
+{
+if(c>5)
+{
+c=0;
+}
+	task(c,d);
+	c++;
+	d++;
+}
+
+function task(m , n) { 
+var s,t;
+	s = m;
+    t = n;
+  setTimeout(function() { 
+       slideshow(s);
+  }, 2000 * t); 
+} 
 </script>
 </body>
 </html>
