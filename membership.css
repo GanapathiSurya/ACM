@@ -21,7 +21,7 @@ body{
 	font-size:25px;
 	
 }
-@media screen and (min-width:800px)
+@media screen and (min-width:1000px)
 {
 .membership-container-li
 {
@@ -31,22 +31,11 @@ body{
 	
 }
 } 
-/*@media screen and (max-width:800px)
-{
-.membership-container-li
-{
-	width:51%;
-     padding: 25px;
-     margin-bottom: 20px;
-     
-}
-} 
-*/
 @media screen and (max-width:800px)
 {
 .membership-container-li
 {
-	width:100%;
+	width:51%;
      padding: 25px;
      margin-bottom: 20px;
      
